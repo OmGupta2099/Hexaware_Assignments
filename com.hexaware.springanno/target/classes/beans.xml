@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="p1"
+		class="
+com.hexaware.maven.com.hexaware.mart.Product">
+		<constructor-arg index="0" value="Apple" />
+		<constructor-arg index="1" value="120" />
+	</bean>
+
+	<bean id="c1" class="
+com.hexaware.maven.com.hexaware.mart.Cart">
+		<constructor-arg index="0" value="3" />
+		<constructor-arg index="1" value="360" />
+		<constructor-arg index="2" ref="p1" />
+	</bean>
+</beans>
