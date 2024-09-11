@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="nut1"
+		class="
+com.hexaware.maven.com.hexaware.main.Nutrients">
+		<constructor-arg index="0" value="20" />
+		<constructor-arg index="1" value="200" />
+		<constructor-arg index="2" value="9" />
+	</bean>
+
+	<bean id="bill1"
+		class="
+com.hexaware.maven.com.hexaware.main.Bill">
+		<property name="gst" value="20" />
+		<property name="discount" value="15" />
+	</bean>
+	<bean id="bill2"
+		class="
+com.hexaware.maven.com.hexaware.main.Bill">
+		<property name="gst" value="8" />
+		<property name="discount" value="6" />
+	</bean>
+	<bean id="item1"
+		class="com.hexaware.maven.com.hexaware.main.Products">
+		<property name="code" value="101" />
+		<property name="itemName" value="Apple" />
+		<property name="price" value="200" />
+		<property name="bill" ref="bill1" />
+
+	</bean>
+	<bean id="item2"
+		class="com.hexaware.maven.com.hexaware.main.Products">
+		<property name="code" value="102" />
+		<property name="itemName" value="Beans" />
+		<property name="price" value="40" />
+		<property name="bill" ref="bill2" />
+
+	</bean>
+</beans>
